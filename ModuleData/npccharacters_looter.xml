@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NPCCharacters>
+  <!--
+    Изменённый грабитель (Looter)
+    Это базовый бандит, который появляется на глобальной карте.
+    Мы переопределяем его параметры: уровень, атрибуты, навыки, снаряжение и поведение.
+    
+    Modified looter NPC.
+    This is the basic bandit unit that spawns on the world map.
+    We override its level, attributes, skills, equipment and behavior.
+  -->
+
+  <NPCCharacter id="looter" name="{=looter_name}Грабитель" default_group="Infantry" level="7" culture="culture.empire" occupation="Bandit">
+    
+    <!--
+      Повышение уровня / Upgrade targets
+      Указывает, в какого юнита может быть улучшен грабитель.
+      Determines which unit this looter can upgrade into.
+    -->
+    <upgrade_targets>
+      <upgrade_target id="looter_t2"/>
+    </upgrade_targets>
+
+    <!--
+      Атрибуты персонажа / Character attributes
+      Влияют на максимальный уровень соответствующих навыков.
+      Affect the maximum level of related skills.
+    -->
+    <attributes>
+      <attribute name="Vigor" value="2"/>        <!-- Сила ближнего боя / Melee strength -->
+      <attribute name="Control" value="1"/>      <!-- Метательное/стрелковое / Ranged skill potential -->
+      <attribute name="Endurance" value="5"/>    <!-- Выносливость, бег / Stamina, running -->
+      <attribute name="Cunning" value="1"/>      <!-- Тактика, разведка / Tactics, scouting -->
+      <attribute name="Social" value="0"/>       <!-- Убеждение и торговля / Charm, trade -->
+      <attribute name="Intelligence" value="0"/> <!-- Инженерия и медицина / Engineering, medicine -->
+    </attributes>
+
+    <!--
+      Фокусы (распределение очков обучения) / Focus points
+      Повышают скорость прокачки соответствующих навыков.
+      Improve skill learning rate.
+    -->
+    <focuses>
+      <focus name="Athletics" value="100"/>
+      <focus name="OneHanded" value="15"/>
+      <focus name="Throwing" value="10"/>
+    </focuses>
+
+    <!--
+      Навыки / Skills
+      Определяют текущие умения юнита.
+      Determine the unit's combat and non-combat capabilities.
+    -->
+    <skills>
+      <skill name="Athletics" value="50"/>       <!-- Скорость передвижения / Movement speed -->
+      <skill name="OneHanded" value="20"/>       <!-- Владение одноручным оружием / One-handed weapon skill -->
+      <skill name="Throwing" value="15"/>        <!-- Владение метательным оружием / Throwing skill -->
+      <skill name="Scouting" value="5"/>         <!-- Разведка / Scouting on map -->
+    </skills>
+
+    <!--
+      Снаряжение / Equipment
+      Набор вещей, которые носит юнит.
+      Equipment set used by this unit.
+    -->
+    <equipmentSet id="looter_equip"/>
+
+    <!--
+      Внешность / Face
+      Пресет лица из файла лиц.
+      Face preset from facegen definitions.
+    -->
+    <face preset="face.looter"/>
+
+    <!--
+      Голос / Voice
+      Аудио-профиль голоса, применяемый в бою.
+      Audio profile used for unit's voice in combat.
+    -->
+    <voice id="bandit_voice_1"/>
+
+    <!--
+      Предпочтительная формация / Formation preference
+      Указывает, в какую формацию будет назначен в бою.
+      Determines battle group preference (Infantry, Ranged, Cavalry, etc.)
+    -->
+    <formation_preference>Infantry</formation_preference>
+
+  </NPCCharacter>
+</NPCCharacters>
