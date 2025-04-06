@@ -27,22 +27,30 @@
 
   <Xmls>
     <XmlNode>                
-			<XmlName id="NPCCharacters" path="mybandits_bandits" />
+	  <XmlName id="NPCCharacters" path="mybandits_bandits" />
 			<IncludedGameTypes>
 				<GameType value="Campaign" />
 				<GameType value="CampaignStoryMode" />
-        <GameType value="Sandbox" />
+                <GameType value="Sandbox" />
 			</IncludedGameTypes>
-		</XmlNode> 
+	</XmlNode> 
     <XmlNode>
       <XmlName id="partyTemplates" path="mybandits_partyTemplates" />
 			<IncludedGameTypes>
 				<GameType value="Campaign" />
 				<GameType value="CampaignStoryMode" />
-        <GameType value="Sandbox" />
+                <GameType value="Sandbox" />
 			</IncludedGameTypes>
-		</XmlNode>
-  </Xmls>
+	</XmlNode>
+	<XmlNode>
+	  <XmlName id="Factions" path="mybandits_spclans" />
+			<IncludedGameTypes>
+				<GameType value="Campaign" />
+				<GameType value="CampaignStoryMode" />
+				<GameType value="Sandbox" />
+			</IncludedGameTypes>
+	</XmlNode>
+ </Xmls>
   
   
   
